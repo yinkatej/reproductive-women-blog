@@ -10,9 +10,10 @@ public class CorsConfiguration implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://127.0.0.1:5500") // Add the URL of your frontend application
+                .allowedOrigins("*") // Add the URL of your frontend application
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowCredentials(true)
+                .allowedHeaders("*")
+                .allowCredentials(false)
                 .maxAge(3600);
     }
 }

@@ -24,6 +24,6 @@ public class Topic {
     private Set<Blog> blog = new HashSet<>();
 
     @JsonIgnore
-    @OneToOne(mappedBy = "topic")
-    private User user;
+    @OneToMany(mappedBy = "topic")
+    private Set<User> user = new HashSet<>();
 }

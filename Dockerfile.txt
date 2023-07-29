@@ -1,0 +1,5 @@
+FROM eclipse-termurin:17-jdk-alpine
+VOLUME /tmp
+COPY target/*.jar healthcare-blog.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
+EXPOSE 3000
